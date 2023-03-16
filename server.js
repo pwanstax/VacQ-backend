@@ -3,11 +3,13 @@ const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/db");
+const nodemon = require("nodemon");
 
 dotenv.config({path: "./config/config.env"});
 
 connectDB();
 
+const appointments = require("./routes/appointments");
 const hospitals = require("./routes/hospitals");
 const auth = require("./routes/auth");
 const app = express();
@@ -17,6 +19,8 @@ app.use(cookieParser());
 
 app.use("/api/v1/hospitals", hospitals);
 app.use("/api/v1/auth", auth);
+app.use("/api/v1/appointments", appointments);
+
 const PORT = process.env.PORT || 5001;
 
 const server = app.listen(
