@@ -1,5 +1,5 @@
 const Hospital = require("../models/Hospital.js");
-// const VacCenter = require("../models/VacCenter.js");
+const VacCenter = require("../models/VacCenter.js");
 
 exports.getHospitals = async (req, res, next) => {
   try {
