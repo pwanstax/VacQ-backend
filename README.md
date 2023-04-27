@@ -1,37 +1,64 @@
-## Simple Express.js Project
+<h1 align="center">Simple Express.js Project</h1>
 
-This project is a RESTful API built with Express.js framework that provides CRUD operations on Hospitals and Appointments. It was created as part of a software development practice course at a university.
+<p align="center">
+  <strong>RESTful API built with Express.js framework that provides CRUD operations on Hospitals and Appointments.</strong>
+  <br>
+  This project was created as part of a software development practice course at a university.
+</p>
 
 ## Installation
 
 To get started with this project, you need to:
 
-- Clone this repository to your local machine
-- Install dependencies by running `npm install` in the root directory of the project
-- Create a `.env` file based on the example provided in `.env.example` file
-- Start the server with `npm start` or `npm run dev` if you want to run it in development mode
+1. Clone this repository to your local machine
+2. Install dependencies by running the following command: `npm install`
+3. Create a `.env` file based on the example provided in `.env.example` file
+4. Start the server with the following command: `npm start` 
+Alternatively, if you want to run it in development mode, use: `npm run dev`
 
-## Usage
 
-This API supports the following endpoints:
+## API Endpoints
 
-- `/api/v1/hospitals` - GET all hospitals, POST a new hospital
-- `/api/v1/hospitals/:id` - GET a hospital by id, PUT update a hospital by id, DELETE a hospital by id
-- `/api/v1/hospitals/vacCenters` - GET all vaccination centers
-- `/api/v1/hospitals/:hospitalId/appointments` - GET all appointments for a specific hospital, POST a new appointment for that hospital
-- `/api/v1/appointments` - GET all appointments, POST a new appointment
-- `/api/v1/appointments/:id` - GET an appointment by id, PUT update an appointment by id, DELETE an appointment by id
-- `/api/v1/auth/register` - POST register a new user
-- `/api/v1/auth/login` - POST login a user
-- `/api/v1/auth/me` - GET current logged in user
-- `/api/v1/auth/logout` - GET logout current user
+### Hospitals
+
+- `GET /api/v1/hospitals`: Get all hospitals
+- `GET /api/v1/hospitals/:id`: Get a hospital by id
+- `POST /api/v1/hospitals`: Create a new hospital
+- `PUT /api/v1/hospitals/:id`: Update a hospital by id
+- `DELETE /api/v1/hospitals/:id`: Delete a hospital by id
+
+
+### Vaccination Centers
+
+- `GET /api/v1/hospitals/vacCenters`: Get all vaccination centers
+
+
+### Appointments
+
+- `GET /api/v1/appointments`: Get all appointments
+- `GET /api/v1/appointments/:id`: Get an appointment by id
+- `POST /api/v1/appointments`: Create a new appointment
+- `PUT /api/v1/appointments/:id`: Update an appointment by id
+- `DELETE /api/v1/appointments/:id`: Delete an appointment by id
+
+
+### User Authentication
+
+- `POST /api/v1/auth/register`: Register a new user
+- `POST /api/v1/auth/login`: Login a user
+- `GET /api/v1/auth/me`: Get current logged in user
+- `GET /api/v1/auth/logout`: Logout current user
 
 This API is protected by authentication middleware that requires a valid JWT token and user's role to access certain routes.
+
 
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
+
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+
